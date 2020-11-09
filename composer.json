@@ -1,0 +1,12 @@
+{
+    "name": "admin/hibre-biher-college",
+    "authors": [
+        {
+            "name": "Simonbelete",
+            "email": "simonbelete@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}

@@ -41,9 +41,3 @@ if (isset($_POST["Submit"])){
     }
 }
 ?>
-
-
-<form method="POST" action="">
-    <input type="email" name="email">
-    <input type="submit" name="submit" />
-</form>

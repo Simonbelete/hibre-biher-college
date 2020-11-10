@@ -1,0 +1,21 @@
+
+button#notification-icon {
+    background: transparent;
+    border: 0;
+    position:relative;
+    cursor:pointer;
+}
+#notification-count{
+    left: 0px;
+    top: 0px;
+    font-size: 0.9em;
+    color: #de5050;
+    font-weight:bold;
+}
+#notification-latest {  
+    right: 0px;
+    position:  relative;
+    padding-left:1px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.20);
+    text-align: left;
+}

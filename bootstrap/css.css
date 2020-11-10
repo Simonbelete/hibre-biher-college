@@ -1,0 +1,146 @@
+
+.cc {
+  width: 70px;
+  height: 50px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.cc:hover {
+  width: 100px;
+  height: 70px;
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg);
+}
+
+
+.transformed {
+    -webkit-transform: translate3d(0, 0, 80px) rotate3d(0, 1, 0, -60deg) scale3d(1, 1, 2);
+    transform: translate3d(0, 0, 5px) rotate3d(0, 1, 0, -60deg) scale3d(1, 1, 2);
+}
+
+
+#shape {
+      background-color: black;
+      color: white;
+      font-family: 'Lucida Grande', Verdana, Arial;
+      font-size: 12px;
+      background-image: -webkit-gradient(radial,
+        50% 500, 1,
+        50% 500, 400,
+        from(rgba(255, 255, 255, 0.3)),to(rgba(255, 255, 255, 0)));
+     background-repeat: no-repeat;
+    }
+
+    #container {
+      width: 90%;
+      -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+
+    }
+    #stage {
+      width: 100%;
+      -webkit-transition: -webkit-transform 2s;
+      -webkit-transform-style: preserve-3d;
+    }
+
+    #shape {
+      width: 150px;
+      -webkit-transform-style: preserve-3d;
+    }
+
+    .plane {
+      position: absolute;
+      height: 100px;
+      width: 200px;
+      border: 1px solid black;
+      -webkit-border-radius: 12px;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 25pt;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: hidden;
+    }
+    #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    }
+
+    #shape {
+      -webkit-animation: spin 8s infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+
+
+
+    .cube > .eight {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    }
+
+    .cube > .nine {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .ten {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .eleven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    }
+    .A {
+  align-self: center;
+  @include transition(all 0.3s ease);
+  @include transform3d(rotateX(50deg) rotateZ(1deg));
+  font-family: 'Kreon', serif;
+  font-weight: 200;
+  font-size: 12em;
+  color: #FFFFFF;
+  text-shadow:
+    white 0.006em 0.006em 0.007em,
+    #9c9c9c 1px 1px 1px,
+    #9c9c9c 1px 2px 1px,
+    #9c9c9c 1px 3px 1px,
+    #9c9c9c 1px 4px 1px,
+    #9c9c9c 1px 5px 1px,
+    #9c9c9c 1px 6px 1px,
+    #9c9c9c 1px 7px 1px,
+    #9c9c9c 1px 8px 1px,
+    #9c9c9c 1px 9px 1px,
+    #9c9c9c 1px 10px 1px,
+    #9c9c9c 1px 11px 1px,
+    #9c9c9c 1px 12px 1px,
+    rgba(16, 16, 16, 0.4) 1px 18px 6px,
+    rgba(16, 16, 16, 0.2) 1px 22px 10px,
+    rgba(16, 16, 16, 0.2) 1px 26px 35px,
+    rgba(16, 16, 16, 0.4) 1px 30px 65px,
+    white -0.15em -0.1em 100px;
+  &:hover {
+    margin-top: -20px;
+    text-shadow:
+    white 0.006em 0.006em 0.007em,
+    #9c9c9c 1px 1px 1px,
+    #9c9c9c 1px 2px 1px,
+    #9c9c9c 1px 3px 1px,
+    #9c9c9c 1px 4px 1px,
+    #9c9c9c 1px 5px 1px,
+    #9c9c9c 1px 6px 1px,
+    #9c9c9c 1px 7px 1px,
+    #9c9c9c 1px 8px 1px,
+    #9c9c9c 1px 9px 1px,
+    #9c9c9c 1px 10px 1px,
+    #9c9c9c 1px 11px 1px,
+    #9c9c9c 1px 12px 1px,
+    rgba(16, 16, 16, 0.4) 1px 38px 26px,
+    rgba(16, 16, 16, 0.2) 1px 42px 30px,
+    rgba(16, 16, 16, 0.2) 1px 46px 65px,
+    rgba(16, 16, 16, 0.4) 1px 50px 95px,
+    white -0.15em -0.1em 100px;
+  }
+
+

@@ -1,0 +1,84 @@
+
+body {font-family: Arial;color:#212121;font-size: 0.8em;}
+
+.col-search-input {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.datatable-container
+{  
+    padding: 20px;
+    width:80%;
+    margin: 0 auto;
+}
+
+tfoot {
+    display: table-header-group;
+}
+table.dataTable tfoot th, table.dataTable tfoot td {
+    padding: 10px 5px 6px 10px;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #0099cc !important;	
+    padding: 0.4em 0.8em;
+    border: #eaeaea 1px solid;;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #0099cc !important;
+	border-color: #eaeaea !important;
+    background-color: #eaeaea !important;
+	background:unset;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+	background: unset !important;
+	border: #0099cc 1px solid !important;
+    background-color: #0099cc !important;
+	cursor: default;
+}
+table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+    border: 1px solid #ddd;
+    border-left: none;
+    border-top: none;
+}
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #fff;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: #f3f3f3; 
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #fff; 
+}
+table.dataTable thead th, table.dataTable thead td {
+	border: 1px solid #ddd;
+    border-left: none;
+}
+table.dataTable.stripe tbody tr.even, table.dataTable.display tbody tr.even {
+    background-color: #f3f3f3;
+}
+.datatables_length{
+	padding-bottom: 15px;
+}
+table.dataTable{
+	border-left:1px solid #ddd;
+}
+
+.dataTables_wrapper select,.dataTables_wrapper input 
+{
+	border:1px solid #ddd;
+	padding:0.4em;
+}
+#tbl-contact_filter {
+    margin-bottom: 20px;
+}
+table.dataTable tfoot th, table.dataTable tfoot td {
+    border-top: none;
+    border-right: #e0e0e0 1px solid;
+    border-bottom: #e0e0e0 1px solid;
+}

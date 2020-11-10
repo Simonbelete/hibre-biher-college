@@ -1,0 +1,76 @@
+
+  <style type="text/css" media="screen">
+    #shape {
+      background-color: black;
+      color: white;
+      font-family: 'Lucida Grande', Verdana, Arial;
+      font-size: 12px;
+      background-image: -webkit-gradient(radial,
+        50% 500, 1,
+        50% 500, 400,
+        from(rgba(255, 255, 255, 0.3)),to(rgba(255, 255, 255, 0)));
+     background-repeat: no-repeat;
+    }
+    #container {
+      width: 100%;
+      -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+     }
+    #stage {
+      width: 100%;
+      -webkit-transition: -webkit-transform 2s;
+      -webkit-transform-style: preserve-3d;
+    }
+    #shape {
+      position: relative;
+      margin:0px auto;
+      height: 20px;
+      width: 150px;
+      -webkit-transform-style: preserve-3d;
+    }
+    .plane {
+      position: absolute;
+      height: 20px;
+      width: 200px;
+      border: 1px solid black;
+      -webkit-border-radius: 12px;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 50pt;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: hidden;
+    }
+    #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    }
+    #shape {
+      -webkit-animation: spin 8s infinite linear;
+    }
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+    .cube > .eight {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    }
+    .cube > .nine {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    }
+    .cube > .ten {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    }
+    .cube > .eleven {
+      -webkit-transform: scale3d(0.8,
+  </style>
+  <div id="container">
+    <div id="stage" style="transform: translateZ(-200px);">
+      <div id="shape" class=" cube  backfaces" style="margin-top: -40px">
+        <div class="plane eight" style="color: #00FF00">well</div>
+        <div class="plane nine" style="color: #00FF00">cometo</div>
+        <div class="plane ten" style="color: #00FF00">HBC</div>
+        <div class="plane eleven" style="color: #0000FF">collage</div>
+      </div>
+    </div>
+  </div> 

@@ -14,7 +14,7 @@
  *      MYSQLI_CONNECTION           Mysqli connection
  * 
  */
-include_once('../LOADER/db.php');
+require dirname(__FILE__) . '/../LOADER/db.php';
 
 ?>
     <style>

@@ -1,3 +1,22 @@
+<?php
+
+/**
+ * Loading Header
+ * 
+ * Global variables include :-
+ * 
+ *      MYSQL_HOST                  Mysql host name
+ *      MYSQL_PORT                  Mysql host port
+ *      MYSQL_DATABASE              Mysql database name
+ *      MYSQL_USERNAME              Mysql username
+ *      MYSQL_PASSWORD              Mysql user's password
+ * 
+ *      MYSQLI_CONNECTION           Mysqli connection
+ * 
+ */
+include_once('../LOADER/db.php');
+
+?>
     <style>
         .carousel{
             background: #2f4357;
@@ -19,7 +38,7 @@
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
                 <?php
-                    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                    $link = $MYSQLI_CONNECTION;
                     $sql = "SELECT * FROM tbl_images where id=3 or id=4 or id=5 or id=6";
                     $sql2 = "SELECT * FROM tbl_images where id=7 or id=8 or id=10 or id=11";
                     $sql3 = "SELECT * FROM tbl_images where id=12 or id=13 or id=14 or id=15";  ?>

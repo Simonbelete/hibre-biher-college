@@ -2,7 +2,25 @@
      session_start();
     if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
          if(  $_SESSION['role']=='dean'|| $_SESSION['role']=='admin' ){
-    $id=$_SESSION['username'];  ?>
+    $id=$_SESSION['username'];  
+    
+/**
+ * Loading Header
+ * 
+ * Global variables include :-
+ * 
+ *      MYSQL_HOST                  Mysql host name
+ *      MYSQL_PORT                  Mysql host port
+ *      MYSQL_DATABASE              Mysql database name
+ *      MYSQL_USERNAME              Mysql username
+ *      MYSQL_PASSWORD              Mysql user's password
+ * 
+ *      MYSQLI_CONNECTION           Mysqli connection
+ * 
+ */
+require dirname(__FILE__) . '/../LOADER/db.php';
+    
+?>
 
     <!DOCTYPE html>
     <html lang="en">
@@ -67,7 +85,7 @@
                                                 <label><b>Department Name</b></label>
                                                 <select id="Department"  name="dept_name" class="form-control"required>
                                                     <?php
-                                                        $link = mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
+                                                        $link = $MYSQLI_CONNECTION;
                                                         if($link === false){
                                                             die("ERROR: Could not connect. " . mysqli_connect_error());
                                                         }
@@ -93,7 +111,7 @@
                                                 <label><b>Program Name</b></label>
                                                 <select id="program" name="program_name" class="form-control"required>
                                                     <?php
-                                                        $link = mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
+                                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
                                                         if($link === false){
                                                             die("ERROR: Could not connect. " . mysqli_connect_error());
                                                         }
@@ -119,7 +137,7 @@
                                                 <label><b>Type Name</b></label>
                                                 <select id="type" name="type_name" class="form-control"required>
                                                     <?php
-                                                        $link = mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
+                                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
                                                         if($link === false){
                                                             die("ERROR: Could not connect. " . mysqli_connect_error());
                                                         }
@@ -151,7 +169,7 @@
 
                 <h2 align="center" >Department And Program Details</h2><br>
                 <?php
-                $link = mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
+                $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306", "hbceduet", "qazxsw", "hbc")  or die(mysqli_error());
                 $sql = "SELECT * FROM department_program_view  ORDER BY Dept_Name ASC";
                 if($result = mysqli_query($link, $sql)){
                     if(mysqli_num_rows($result) > 0){

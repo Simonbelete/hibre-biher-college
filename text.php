@@ -5,7 +5,7 @@
     header('content-type: text/html; charset=utf8');
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("10.180.50.214", "hbceduet", "qazxsw", "hbc");
+$link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214", "hbceduet", "qazxsw", "hbc");
 	mysql_set_charset('utf8', $link);
  /* define('DB_SERVER', '10.180.50.214:3306');
     define('DB_USERNAME', 'hbceduet');

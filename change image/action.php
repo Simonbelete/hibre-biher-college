@@ -4,7 +4,7 @@
 //action.php
 if(isset($_POST["action"]))
 {
- $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+ $connect = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
 
  if(isset($_FILES["image"])){
                 $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");

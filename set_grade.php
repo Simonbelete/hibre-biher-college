@@ -42,7 +42,7 @@
                                                     <label>Student Id</label>
                                                     <select id="s_id" name="s_id" class="form-control" required>
                                                         <?php
-                                           $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                           $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -73,7 +73,7 @@
                                                     <label>Course Code</label>
                                                     <select id="c_id" name="c_id" class="form-control" required>
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -141,7 +141,7 @@
                                         <input type="Submit" name="Submit" value="Update" class="btn btn-success">
                                     </form>                    <br>
                                     <?php
-                                        $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
+                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
                                             $sql2 = "SELECT * FROM student_course_view where  All_Program='$f_program' and Batch='$batch' and Section='$section'  and Semister='First semister' ";
                                             if($result2 = mysqli_query($link, $sql2)){
                                                 if(mysqli_num_rows($result2) > 0){
@@ -196,7 +196,7 @@
                                                     <label>Student Id</label>
                                                     <select id="s_id" name="s_id" class="form-control" required="required">
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -226,7 +226,7 @@
                                                     <label>Course Code</label>
                                                     <select id="c_id" name="c_id" class="form-control" required="required">
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -293,7 +293,7 @@
                                         <input type="Submit" name="Submit" value="Update" class="btn btn-success">
                                     </form>              <br>
                                     <?php
-                                        $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
+                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
                                             $sql2 = "SELECT * FROM student_course where All_Program='$f_program'  and Batch='$batch' and Semister='Second semister'  ";
                                             if($result2 = mysqli_query($link, $sql2)){
                                                 if(mysqli_num_rows($result2) > 0){
@@ -448,7 +448,7 @@
                                                     <label>Student Id</label>
                                                     <select id="s_id" name="s_id" class="form-control" required>
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -478,7 +478,7 @@
                                                     <label>Course Code</label>
                                                     <select id="c_id" name="c_id" class="form-control" required>
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -545,7 +545,7 @@
                                         <input type="Submit" name="Submit" value="Update" class="btn btn-success">
                                     </form>                    <br>
                                     <?php
-                                        $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
+                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
                                             $sql2 = "SELECT * FROM student_course_view where  All_Program='$f_program' and Batch='$batch' and Section='$section'  and Semister='First semister' ";
                                             if($result2 = mysqli_query($link, $sql2)){
                                                 if(mysqli_num_rows($result2) > 0){
@@ -600,7 +600,7 @@
                                                     <label>Student Id</label>
                                                     <select id="s_id" name="s_id" class="form-control" required="required">
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -630,7 +630,7 @@
                                                     <label>Course Code</label>
                                                     <select id="c_id" name="c_id" class="form-control" required="required">
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -697,7 +697,7 @@
                                         <input type="Submit" name="Submit" value="Update" class="btn btn-success">
                                     </form>              <br>
                                     <?php
-                                        $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
+                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());    // bachlour,master or phd
                                             $sql2 = "SELECT * FROM student_course where All_Program='$f_program'  and Batch='$batch' and Semister='Second semister'  ";
                                             if($result2 = mysqli_query($link, $sql2)){
                                                 if(mysqli_num_rows($result2) > 0){

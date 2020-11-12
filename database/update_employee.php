@@ -1,6 +1,6 @@
 <?php
         if(isset($_POST['Update'])) {
-           $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+           $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $Employee_Id = mysqli_real_escape_string($link, $_REQUEST['id']);
             $First_Name = mysqli_real_escape_string($link, $_REQUEST['First_Name']);
             $Last_Name = mysqli_real_escape_string($link, $_REQUEST['Last_Name']);

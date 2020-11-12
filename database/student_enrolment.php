@@ -1,6 +1,6 @@
 <?php
         if(isset($_POST['Submit'])) {
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $Registration_Id = mysqli_real_escape_string($link, $_REQUEST['reg_id']);
             $Student_Id = mysqli_real_escape_string($link, $_REQUEST['stud_id']);
             $program = mysqli_real_escape_string($link, $_REQUEST['Program']);

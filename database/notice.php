@@ -1,6 +1,6 @@
 <?php
         if(isset($_POST['upload']))  {
-                $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                 $day = mysqli_real_escape_string($link, $_REQUEST['day']);
                 $title = mysqli_real_escape_string($link, $_REQUEST['title']);
                 $body = mysqli_real_escape_string($link, $_REQUEST['body']);

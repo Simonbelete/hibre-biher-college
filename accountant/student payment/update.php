@@ -1,6 +1,6 @@
 ﻿<?php
 if(isset($_POST)){
-    $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+    $connect = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
     $attribute_value= $_POST['pk'];
     $attribute= $_POST['name'];
     $value=$_POST['value'];

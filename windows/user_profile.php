@@ -10,7 +10,7 @@
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
        $aa= $_GET["id"] ;
     // Prepare a select statement
-    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+    $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
     $sql = "SELECT * FROM user_student WHERE Registration_Id =$aa";
     if($result = mysqli_query($link, $sql)){
         if(mysqli_num_rows($result) > 0){

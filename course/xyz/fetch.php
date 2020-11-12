@@ -7,7 +7,7 @@
   if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
     if(  $_SESSION['role']=='dean'|| $_SESSION['role']=='admin' ){
     $id=$_SESSION['username'];
-    $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+    $connect = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
     $query = "SELECT * FROM course";
     $result = mysqli_query($connect, $query);
     $output = array();

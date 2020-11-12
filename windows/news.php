@@ -2,7 +2,7 @@
   <br><br><br><br><br><br>
 <div id="news"class="tab-pane fade" style="margin-top: 20px" >
     <?php
-    $con=mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc") or die(mysqli_error());
+    $con= $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc") or die(mysqli_error());
 	mysqli_set_charset('utf8',$con);
 
     $d=mysqli_query($con,"SELECT * FROM notice");

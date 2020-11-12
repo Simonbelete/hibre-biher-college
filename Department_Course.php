@@ -37,7 +37,7 @@
                                                     <label><b>Course Name</b></label>
                                                     <select id="course_id" name="course_id" class="form-control"required>
                                                         <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -88,7 +88,7 @@
                                                 <label><b>PROGRAM</b></label>
                                                 <select id="program" name="program" class="form-control"required>
                                                      <?php
-                                                            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                             if($link === false){
                                                                 die("ERROR: Could not connect. " . mysqli_connect_error());
                                                             }
@@ -122,7 +122,7 @@
                 <hr style=" background-color: #FFFF00">
                 <hr style=" background-color: #FF0000">
                 <?php
-                    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                    $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                     $sql = "SELECT DISTINCT  All_Program,Semister FROM batch_semister_course_program_vies where All_Program like '%$al%' and Semister='First semister'  ORDER BY Batch ASC";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){

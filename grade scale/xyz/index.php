@@ -28,7 +28,7 @@
 
 
         <?php
-       $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc"
+       $connect = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc"
 );
         $sql = "SELECT * FROM grade_scale";
         $users =mysqli_query($connect, $sql);

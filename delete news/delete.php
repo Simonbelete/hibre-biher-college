@@ -1,5 +1,5 @@
 ﻿<?php
-    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+    $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }

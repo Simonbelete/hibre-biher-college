@@ -1,5 +1,5 @@
 <?php
- $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+ $connect = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
  $query = "SELECT * FROM tuition ";
  $result = mysqli_query($connect, $query);
  ?>

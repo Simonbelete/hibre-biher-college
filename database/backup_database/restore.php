@@ -1,6 +1,6 @@
 
 <?php
-$conn = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+$conn = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
 if (! empty($_FILES)) {
     // Validating SQL file type by extensions
     if (! in_array(strtolower(pathinfo($_FILES["backup_file"]["name"], PATHINFO_EXTENSION)), array(

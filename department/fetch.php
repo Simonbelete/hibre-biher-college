@@ -1,6 +1,6 @@
  <?php
  //fetch.php
- $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+ $connect = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
  if(isset($_POST["employee_id"]))
  {
       $query = "SELECT * FROM tbl_employee WHERE id = '".$_POST["employee_id"]."'";

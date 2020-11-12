@@ -3,7 +3,7 @@
         if(isset($_POST['Submit'])) {
             $Password=$_POST['Password'] ;
             $uname= $_POST['uname'];
-            $con=mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc") or die(mysqli_error());
+            $con= $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc") or die(mysqli_error());
             $sql="SELECT * FROM student_enrollment where Student_Id='$uname'" ;
             $sql2="SELECT * FROM employee where Employee_Id='$uname'" ;
             if($result = mysqli_query($con, $sql)){

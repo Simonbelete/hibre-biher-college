@@ -56,7 +56,7 @@ if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
                                 <label>Head Of Department</label>
                                 <select id="Department" name="dept_head" class="form-control"required>
                                     <?php
-                                        $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                        $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                         if($link === false){
                                             die("ERROR: Could not connect. " . mysqli_connect_error());
                                         }

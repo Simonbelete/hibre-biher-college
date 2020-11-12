@@ -1,6 +1,6 @@
 <?php
         if(isset($_POST['Submit'])){
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $stud_id = mysqli_real_escape_string($link, $_REQUEST['stud_id']);
             $Batch = mysqli_real_escape_string($link, $_REQUEST['Batch']);
             $Section = mysqli_real_escape_string($link, $_REQUEST['Section']);
@@ -40,7 +40,7 @@
         }
 
         if(isset($_POST['Update'])) {
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION;//mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $stud_id = mysqli_real_escape_string($link, $_REQUEST['stud_id']);
             $Batch = mysqli_real_escape_string($link, $_REQUEST['Batch']);
             $Section = mysqli_real_escape_string($link, $_REQUEST['Section']);

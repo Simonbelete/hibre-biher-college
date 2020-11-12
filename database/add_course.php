@@ -1,6 +1,6 @@
 <?php
         if(isset($_POST['Submit'])){
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $Course_Id = mysqli_real_escape_string($link, $_REQUEST['Course_Id']);
             $Course_Name = mysqli_real_escape_string($link, $_REQUEST['Course_Name']);
             $Course_Credit = mysqli_real_escape_string($link, $_REQUEST['Course_Credit']);
@@ -16,7 +16,7 @@
              die(mysqli_error($link));
         }
          if(isset($_POST['Update'])){
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $Course_Id = mysqli_real_escape_string($link, $_REQUEST['Course_Id']);
             $Course_Name = mysqli_real_escape_string($link, $_REQUEST['Course_Name']);
             $Course_Credit = mysqli_real_escape_string($link, $_REQUEST['Course_Credit']);

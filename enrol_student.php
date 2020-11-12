@@ -82,7 +82,7 @@
                                             <label><b>REGISTRATION ID</b></label>
                                             <select id="reg_id" name="reg_id" class="form-control"required>
                                                 <?php
-                                                    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                    $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                     if($link === false){
                                                         die("ERROR: Could not connect. " . mysqli_connect_error());
                                                     }
@@ -111,7 +111,7 @@
                                         <div class="form-group">
                                             <label><b>PROGRAM</b></label>
                                             <select id="Program" name="Program" class="form-control"required>
-                                                <?php                                                      $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                                <?php                                                      $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                                     if($link === false){
                                                         die("ERROR: Could not connect. " . mysqli_connect_error());
                                                     }
@@ -189,7 +189,7 @@
 
             <h2 class="pull-left" style="text-align: center">Students Details</h2>
             <?php
-            $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+            $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
             $sql = "SELECT * FROM user_student";
             if($result = mysqli_query($link, $sql)){
                 if(mysqli_num_rows($result) > 0){

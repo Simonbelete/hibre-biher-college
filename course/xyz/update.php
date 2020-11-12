@@ -1,6 +1,6 @@
 ﻿<?php
 if(isset($_POST)){
-    $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+    $connect = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
     $COURSE_ID= $_POST['pk'];
     $C_NAME= $_POST['name'];
     $C_VALUE=$_POST['value'];

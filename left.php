@@ -20,7 +20,7 @@ if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
                         <?php  if(  $_SESSION['role']=='admin' ){ ?>
                             <li>
                                 <?php
-                                    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                    $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                     if($link === false){  die("ERROR: Could not connect. " . mysqli_connect_error());
                                     }
                                     $sql = "SELECT DISTINCT Dept_Name FROM department_program_view ORDER BY Dept_Name ASC";
@@ -97,7 +97,7 @@ if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
                             </li>
                             <form action="general_student_batch_semister.php" method="post">
                                 <?php
-                                    $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                    $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                     if($link === false){
                                         die("ERROR: Could not connect. " . mysqli_connect_error());
                                     }
@@ -138,7 +138,7 @@ if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
                     <?php } ?>
                         <form action="General_Department_Course.php" method="post">
                             <?php
-                                $link = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
+                                $link = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc")  or die(mysqli_error());
                                 if($link === false){
                                     die("ERROR: Could not connect. " . mysqli_connect_error());
                                 }

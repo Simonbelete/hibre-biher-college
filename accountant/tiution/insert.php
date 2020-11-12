@@ -1,5 +1,5 @@
  <?php
- $connect = mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
+ $connect = $MYSQLI_CONNECTION; //mysqli_connect("10.180.50.214:3306","hbceduet","qazxsw","hbc");
  if(!empty($_POST))
  {
       $output = '';

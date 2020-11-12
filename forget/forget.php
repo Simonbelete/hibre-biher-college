@@ -20,17 +20,17 @@ if (isset($_POST["Submit"])){
         $mail->isSMTP();                                            // Send using SMTP
         $mail->Host       = 'hibrebiher.com';                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'noreply@hibrebiher.com';                     // SMTP username
-        $mail->Password   = 'A2JZI?yUu%C6';                               // SMTP password
+        $mail->Username   = 'reset@hibrebiher.com';                     // SMTP username
+        $mail->Password   = '=@wvREFtFK]6';                               // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('noreply@hibrebiher.com');
+        $mail->setFrom('reset@hibrebiher.com');
         $mail->addAddress($emailto);     // Add a recipient
 
         // Content
-        $mail->isHTML(true);                                  // Set email format to HTML
+        //$mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Here is the subject';
         $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';

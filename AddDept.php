@@ -1,5 +1,22 @@
 
 <?php
+
+/**
+ * Loading Header
+ * 
+ * Global variables include :-
+ * 
+ *      MYSQL_HOST                  Mysql host name
+ *      MYSQL_PORT                  Mysql host port
+ *      MYSQL_DATABASE              Mysql database name
+ *      MYSQL_USERNAME              Mysql username
+ *      MYSQL_PASSWORD              Mysql user's password
+ * 
+ *      MYSQLI_CONNECTION           Mysqli connection
+ * 
+ */
+require dirname(__FILE__) . '/LOADER/db.php';
+
 if( isset($_SESSION['username'])&& isset($_SESSION['role'])){
      if(  $_SESSION['role']=='dean'|| $_SESSION['role']=='admin' ){
     $id=$_SESSION['username'];

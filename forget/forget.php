@@ -1,4 +1,4 @@
- <?php
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -21,13 +21,13 @@ if (isset($_POST["Submit"])){
         $mail->Host       = 'hibrebiher.com';                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->Username   = 'noreply@hibrebiher.com';                     // SMTP username
-        $mail->Password   = 'noreply123456789';                               // SMTP password
+        $mail->Password   = 'A2JZI?yUu%C6';                               // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('noreply@hibrebiher.com', 'Hibre Biher Collage');
-        $mail->addAddress($emailto, 'Joe User');     // Add a recipient
+        $mail->setFrom('noreply@hibrebiher.com');
+        $mail->addAddress($emailto);     // Add a recipient
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
